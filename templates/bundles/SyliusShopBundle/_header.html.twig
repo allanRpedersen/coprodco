@@ -1,0 +1,14 @@
+<div class="ui basic segment">
+    <div class="ui three column stackable grid">
+        <div class="column" style="background-color: rgb(120, 120, 120);">
+            <a href="{{ path('sylius_shop_homepage') }}"><img src="{{ asset('assets/shop/img/logo-trav-indep-nobg.png') }}" alt="Logo" class="ui small image" /></a>
+        </div>
+        <div class="column" style="background-color: rgb(180, 180, 180);">
+            {{ sonata_block_render_event('sylius.shop.layout.header') }}
+        </div>
+        <div class="right aligned column" style="background-color: rgb(210, 210, 210);">
+            <a href="https://www.coprod.co/"><img src="{{ asset('assets/shop/img/picto-logo-coprod-white.png') }}" alt="Logo" class="ui small image" /></a>           
+            {# {{ render(url('sylius_shop_partial_cart_summary', {'template': '@SyliusShop/Cart/_widget.html.twig'})) }} #}
+        </div>
+    </div>
+</div>
