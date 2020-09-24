@@ -1,2 +1,7 @@
 swiftmailer:
-    disable_delivery: true
+    disable_delivery: false
+
+sylius_mailer:
+    sender:
+        name: coprodco
+        address: coprod@webcoop.fr
