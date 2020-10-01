@@ -33,3 +33,25 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+    # subscribe the listener 
+    app.listener.admin.menu_builder:
+        class: App\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+    app.supplier.form.type:
+        class: App\Form\Type\SupplierType
+        tags:
+            - { name: form.type }
+        arguments: ['%app.model.supplier.class%', ['sylius']]
+        
+    app.supplier_translation.form.type:
+        class: App\Form\Type\SupplierTranslationType
+        tags:
+            - { name: form.type }
+        arguments: ['%app.model.supplier_translation.class%', ['sylius']]
+
+# imports:
+
+#     - { resource: "@BitBagSyliusCmsPlugin/Resources/config/services/sitemap_provider.yml" }

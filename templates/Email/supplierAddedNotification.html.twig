@@ -1,0 +1,14 @@
+{% block subject %}
+    A new supplier {{ supplier.name }} has been submitted
+{% endblock %}
+
+{% block body %}
+    Hello supplier Database Example!
+
+    A new supplier has been submitted for review to your database.
+
+    Title: {{ supplier.title }}
+    Added by {{ user.name }}
+
+    Please review it and accept or reject!
+{% endblock %}

@@ -1,0 +1,8 @@
+sylius_mailer:
+    sender:
+        name: coprodco
+        address: coprod@webcoop.fr
+    emails:
+        supplier_added_notification:
+          subject: A new supplier {{ supplier.name }} has been submitted
+          template: "Email/supplierAddedNotification.html.twig"

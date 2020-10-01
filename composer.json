@@ -4,7 +4,7 @@
     "keywords": ["symfony", "sylius", "distribution", "ecommerce", "cart", "shopping"],
     "type": "project",
     "license": "proprietary",
-    "homepage": "https://sylius.com",
+    "homepage": "https://coprodco.webcoop.fr",
     "authors": [
         {
             "name": "Paweł Jędrzejewski"
@@ -18,7 +18,10 @@
     ],
     "require": {
         "php": "^7.3",
+        "bitbag/cms-plugin": "^2.4",
+        "cweagans/composer-patches": "^1.6",
         "sensiolabs/security-checker": "^6.0",
+        "sylius/grid-bundle": "^1.7",
         "sylius/sylius": "~1.8.0",
         "symfony/dotenv": "^4.4",
         "symfony/flex": "^1.9"
@@ -98,6 +101,13 @@
         },
         "branch-alias": {
             "dev-master": "1.8-dev"
+        },
+        "patches": {
+            "symfony/maker-bundle": {
+                "Provide flag to force annotation in make entity command": "https://raw.githubusercontent.com/vklux/maker-bundle-force-annotation/master/maker-force-annotation-flag.patch"
+            }
         }
+
     }
+
 }

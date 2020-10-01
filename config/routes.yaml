@@ -1,0 +1,36 @@
+# config/routes.yaml
+bitbag_sylius_cms_plugin:
+    resource: "@BitBagSyliusCmsPlugin/Resources/config/routing.yml"
+    
+app_admin_supplier:
+    resource: |
+        alias: app.supplier
+        section: admin
+        path: admin/suppliers
+        templates: SyliusAdminBundle:Crud
+        redirect: update
+        grid: app_admin_supplier
+        vars:
+            all:
+                subheader: app.ui.supplier
+            index:
+                icon: 'file image outline'
+    type: sylius.resource
+    prefix: admin ## ajout translation
+
+# app_admin_supplier:
+#     resource: |
+#         alias: app.supplier
+#         section: admin
+#         templates: SyliusAdminBundle:Crud
+#         redirect: update
+#         grid: app_admin_supplier
+#         vars:
+#             all:
+#                 subheader: app.ui.supplier
+#                 templates:
+#                     form: App:Supplier:_form.html.twig
+#             index:
+#                 icon: 'file image outline'
+#     type: sylius.resource
+#     prefix: admin
